@@ -16,7 +16,7 @@
     // USED BY
     // launch.json, through its preLaunchTask setting.
 
-    
+
     "version": "2.0.0",
     "tasks": [
         {
@@ -32,7 +32,7 @@
             "options": {
                 "cwd": "${workspaceFolder}",
                 "env": {
-                    "PATH": "C:\\msys64\\usr\\bin;C:\\msys64\\ucrt64\\bin;${env:PATH}"
+                    "PATH": "C:\\msys64\\ucrt64\\bin;C:\\msys64\\usr\\bin;${env:PATH}"
                 }
             },
             "problemMatcher": ["$gcc"],
