@@ -1,0 +1,29 @@
+{
+    // HOW IT WORKS
+    // - Sets the compiler used by IntelliSense.
+    // - Configures the C and C++ language standards.
+    // - Helps with code completion, headers, and error detection.
+    //
+    // NOTE
+    // This does not compile or run programs.
+
+    
+    "configurations": [
+        {
+            "name": "UCRT64",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "cStandard": "c23",
+            "cppStandard": "c++23",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}

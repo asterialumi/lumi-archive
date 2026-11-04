@@ -1,0 +1,45 @@
+
+{
+    // PURPOSE
+    // Defines the build task used by VS Code.
+    //
+    // HOW IT WORKS
+    // - Calls Bash to execute build.sh.
+    // - Passes the active file's extension, source path,
+    //   and output executable path to the script.
+    // - build.sh selects GCC or G++ based on the extension.
+    // - Outputs executables into bin/, mirroring the source folders.
+    //
+    // SHORTCUT
+    // Ctrl+Shift+B: Build the active file.
+    //
+    // USED BY
+    // launch.json, through its preLaunchTask setting.
+
+    
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build active C/C++ file",
+            "type": "process",
+            "command": "C:\\msys64\\usr\\bin\\bash.exe",
+            "args": [
+                "${workspaceFolder}/.vscode/build.sh",
+                "${fileExtname}",
+                "${file}",
+                "${workspaceFolder}/bin/${relativeFileDirname}/${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "PATH": "C:\\msys64\\usr\\bin;C:\\msys64\\ucrt64\\bin;${env:PATH}"
+                }
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+
+{
+    // PURPOSE
+    // Configures how VS Code launches and debugs a program.
+    //
+    // HOW IT WORKS
+    // - Selects the executable to launch.
+    // - Uses GDB as the debugger.
+    // - Runs the build task before launching.
+    //
+    // SHORTCUTS
+    // - F5: Debug the program.
+    // - Ctrl+F5: Run without debugging.
+    //
+    // DEPENDENCY
+    // preLaunchTask must match a task label in tasks.json.
+
+    
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug C++ file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/${relativeFileDirname}/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe",
+            "preLaunchTask": "Build active C/C++ file",
+            "setupCommands": [
+                {
+                    "description": "Enable GDB pretty-printing",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}

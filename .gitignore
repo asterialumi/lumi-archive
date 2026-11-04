@@ -1,0 +1,26 @@
+
+# Compiled executables
+*.exe
+*.out
+*.o
+*.obj
+
+# Debug symbols and compiler-generated files
+*.pdb
+*.ilk
+*.gch
+
+# Build output directories
+build/
+bin/
+dist/
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# Editor and operating system clutter
+.DS_Store
+Thumbs.db
+desktop.ini
