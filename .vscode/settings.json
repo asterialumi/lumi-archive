@@ -1,0 +1,25 @@
+{
+    // PURPOSE
+    // Configures workspace-level editor behaviors and extension settings.
+    //
+    // HOW IT WORKS
+    // - Scopes formatting and linting rules strictly to Python files (.py).
+    // - Uses Ruff to format and organize imports on save.
+    // - Disables terminal auto-activation to keep shell sessions clean.
+    //
+    // WORKFLOW
+    // - Ctrl+S: Auto-formats Python code and cleans unused imports.
+    // - Run 'activate' in PowerShell to enter the repository's .venv sandbox.
+    // - Run 'deactivate' to exit the sandbox.
+
+    
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        }
+    },
+    "python.terminal.activateEnvironment": false
+}

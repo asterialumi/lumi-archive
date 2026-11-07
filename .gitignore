@@ -24,3 +24,9 @@ dist/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Python virtual environments
+.venv/
+venv/
+__pycache__/
+*.pyc
