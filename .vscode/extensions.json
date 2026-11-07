@@ -1,0 +1,9 @@
+{
+    // required extensions if you want to clone this repository, and be able
+    // to use the included languages and their intended workflows properly.
+    "recommendations": [
+        "ms-vscode.cpptools-extension-pack",
+        "ms-python.python",
+        "charliermarsh.ruff"
+    ]
+}
