@@ -8,7 +8,7 @@ This guide details setting up the native GCC/G++ UCRT64 toolchain on Windows for
 ## 1. Installation
 
 1. Download and run the installer from [msys2.org](https://www.msys2.org/).
-2. Install to the default directory (`C:\msys64`).
+2. Install to the default directory (`C:\msys64`). **I RECOMMEND FOLLOWING THIS**.
 3. When finished, open the **MSYS2 UCRT64** terminal from the Start Menu.
 
 
@@ -53,9 +53,11 @@ bash --version
 If all commands return version numbers without errors, the environment is ready.
 
 
-## 5. VS Code Alignment
+## 5. Extensions & VS Code Alignment
 
-If MSYS2 was installed to a non-default location (not `C:\msys64`), update the absolute paths in the following .vscode files to match the custom path:
+Download the `ms-vscode.cpptools-extension-pack` extension for general C/C++ capabilities and workspace configurations in `.vscode` to work.
+
+If MSYS2 was installed to a non-default location (not `C:\msys64`), update the absolute paths in the following `.vscode` files to match the custom path:
 - `.vscode/c_cpp_properties.json` (`compilerPath`)
 - `.vscode/launch.json` (`miDebuggerPath`)
 - `.vscode/tasks.json` (`command` and `PATH` env)
